@@ -1,5 +1,6 @@
 
-
+//keys
+require("dotenv").config();
 
 var inquirer = require("inquirer");
 
@@ -12,7 +13,7 @@ var connection = mysql.createConnection({
     host:'localhost',
     port:3306,
     user:'root',
-    password:'nst032596',
+    password: process.env.CONNECTION_ID,
     database: 'bamazon_db'
 });
 
